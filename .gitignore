@@ -1,0 +1,5 @@
+relay_domains.cf
+virtual_alias_maps.cf
+virtual_domains_maps.cf
+virtual_mailbox_limits.cf
+virtual_mailbox_maps.cf

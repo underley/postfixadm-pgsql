@@ -1,0 +1,13 @@
+transport_maps = hash:/etc/postfix/transport
+relay_domains = proxy:pgsql:/etc/postfix/pgsql/relay_domains.cf
+virtual_mailbox_domains = proxy:pgsql:/etc/postfix/pgsql/virtual_domains_maps.cf
+virtual_alias_maps = proxy:pgsql:/etc/postfix/pgsql/virtual_alias_maps.cf
+virtual_mailbox_maps = proxy:pgsql:/etc/postfix/pgsql/virtual_mailbox_maps.cf
+virtual_mailbox_base = /home/vmail
+virtual_mailbox_limit = 512000000
+virtual_minimum_uid = 5000
+virtual_transport = virtual
+virtual_uid_maps = static:5000
+virtual_gid_maps = static:5000
+local_transport = virtual
+local_recipient_maps = $virtual_mailbox_maps
